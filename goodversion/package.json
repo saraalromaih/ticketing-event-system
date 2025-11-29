@@ -1,0 +1,17 @@
+
+ {
+  "name": "ticketing-event-system",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "http-server . -p 4173",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "http-server": "^14.1.1"
+  }
+}
+
+
+
+
