@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+ * Basket Page - Event Management System
+ * 
+ * Main Functions:
+ * 1. Basket Display
+ *    - renderBasket(): Main basket view with login check
+ *    - Empty state handling with browse events link
+ *    - Item display with images and details
+ *    - Total price calculation
+ * 
+ * 2. Basket Management
+ *    - updateQuantity(): Change item quantity with validation
+ *    - removeFromBasket(): Remove items from cart
+ *    - calculateTotal(): Price calculation for paid tickets
+ *    - Local storage persistence
+ * 
+ * 3. Checkout Process
+ *    - initPayPal(): Payment system initialization
+ *    - submitOrder(): Order processing with validation
+ *    - Free ticket handling with direct booking
+ *    - Payment verification and refund handling
+ * 
+ * 4. User Interface
+ *    - Item cards with event images
+ *    - Quantity controls with +/- buttons
+ *    - Price display with free ticket labels
+ *    - PayPal integration for paid tickets
+ * 
+ * 5. Integration
+ *    - PayPal SDK for payment processing
+ *    - Local storage for basket persistence
+ *    - User session management
+ *    - Event data integration
+ * 
+ * Data Storage:
+ * - basket: Cart contents in local storage
+ * - eventData: Event information and details
+ * - currentUser: Active user session data
+ * 
+ * External Dependencies:
+ * - Font Awesome: Icons for UI elements
+ * - Inter font: Typography for consistent design
+ * - PayPal SDK: Payment processing integration
+ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basket - Event Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=ASSuHaSwxEzm2QzbRZfuIcuXN6P1b2Wj5tY3Tx9VOumbmbkPxzN61Tj62W9PtvYd_XmCCvkQP2e-Lemd&currency=USD"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="user-profile" id="user-profile">
+        <!-- User profile icon and dropdown will be rendered here by script.js -->
+      </div>
+      <h1>Event Management System</h1>
+      <p class="welcome-message">Welcome to our website!</p>
+      <div class="btn-group" id="nav-links">
+        <!-- Navigation links will be rendered here by script.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Only keep the dynamic basket-items container -->
+  <div id="basket-items"></div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNavLinks();
+      renderBasket();
+    });
+  </script>
+</body>
+</html> 

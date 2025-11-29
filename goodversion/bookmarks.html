@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+ * Bookmarks Page - Event Management System
+ * 
+ * Main Functions:
+ * 1. Bookmark Display
+ *    - renderBookmarkedEvents(): Main bookmarks view with login check
+ *    - Empty state handling with browse events link
+ *    - Event sorting by date with formatted display
+ *    - Event list with images and details
+ * 
+ * 2. Bookmark Management
+ *    - toggleBookmark(): Add/remove bookmarks with animations
+ *    - getUserBookmarks(): Load user's bookmarks from storage
+ *    - showNotification(): Status messages with animations
+ *    - Local storage persistence
+ * 
+ * 3. Event Display
+ *    - Event cards with images and details
+ *    - Date and location info with icons
+ *    - Bookmark button with tooltip and animations
+ *    - Event navigation with click handling
+ * 
+ * 4. User Interface
+ *    - Bookmark animations with pulse effect
+ *    - Interactive buttons with hover states
+ *    - Responsive layout for all devices
+ *    - Empty state messages with actions
+ * 
+ * 5. Integration
+ *    - Local storage for bookmark persistence
+ *    - User session management
+ *    - Event data integration
+ *    - Navigation system integration
+ * 
+ * Data Storage:
+ * - bookmarks_[email]: User bookmarks in local storage
+ * - eventData: Event information and details
+ * - currentUser: Active user session data
+ * 
+ * External Dependencies:
+ * - Font Awesome: Icons for UI elements
+ * - Inter font: Typography for consistent design
+ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Bookmarks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Event Management System</h1>
+    <div class="btn-group" id="nav-links">
+      <!-- Navigation links will be rendered here by script.js -->
+    </div>
+  </header>
+
+  <div id="form-area"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

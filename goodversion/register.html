@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ * Registration Page - Event Management System
+ * 
+ * Main Functions:
+ * 1. Registration Form
+ *    - Form fields: name, email, phone, password
+ *    - Password confirmation field
+ *    - Submit button with validation
+ *    - Form validation with alerts
+ * 
+ * 2. Input Validation
+ *    - Email format validation with regex
+ *    - Phone number format with regex
+ *    - Password length (min 8 chars)
+ *    - Password matching check
+ * 
+ * 3. User Registration
+ *    - Email availability check in users array
+ *    - User data storage in local storage
+ *    - Session initialization with auto-login
+ *    - Home page redirect after success
+ * 
+ * 4. Data Management
+ *    - Local storage handling for users array
+ *    - User data persistence in both session and storage
+ *    - Session management with auto-login
+ *    - Error handling with alerts
+ * 
+ * 5. Security
+ *    - Password validation with length check
+ *    - Email verification with format check
+ *    - Phone validation with format check
+ *    - Duplicate email check
+ * 
+ * Note: Organizer registration is not available.
+ * Organizer accounts are managed by administrators only.
+ * 
+ * Data Storage:
+ * - users: User accounts array in local storage
+ * - user: Current user session in local storage
+ * 
+ * External Dependencies:
+ * - Font Awesome: Icons for UI elements
+ * - Inter font: Typography for consistent design
+ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Management System - Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Event Management System</h1>
+    <div class="btn-group">
+      <a href="Home.html" class="btn">Search Events</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="register.html" class="btn">Register</a>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <input type="text" id="reg-name" placeholder="Full Name" />
+    <input type="email" id="reg-email" placeholder="Email" />
+    <input type="tel" id="reg-phone" placeholder="Phone Number" />
+    <input type="password" id="reg-password" placeholder="Password" />
+    <input type="password" id="reg-confirm-password" placeholder="Confirm Password" />
+    <button class="submit-btn" id="register-btn">Register</button>
+  </div>
+</body>
+</html>
+

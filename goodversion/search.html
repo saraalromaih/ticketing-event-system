@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+ * Search Page - Event Management System
+ * 
+ * Main Functions:
+ * 1. Search Interface
+ *    - showSearch(): Main search view with filters and map
+ *    - filterEvents(): Real-time filtering with multiple criteria
+ *    - sortEvents(): Sort by date/price/distance
+ *    - updateDistanceFilter(): Distance range with status updates
+ * 
+ * 2. Location Features
+ *    - useCurrentLocation(): Geolocation with error handling
+ *    - selectCity(): City selection with coordinates
+ *    - calculateDistance(): Distance calculation with km values
+ *    - addEventMarkers(): Map markers with popups
+ * 
+ * 3. Filtering Options
+ *    - Keyword search with real-time updates
+ *    - Date filtering with exact date match
+ *    - Category filtering with active states
+ *    - Distance filtering with range control
+ * 
+ * 4. Results Display
+ *    - Event cards with images and details
+ *    - Distance indicators with km values
+ *    - Category icons with tooltips
+ *    - Price display with currency
+ * 
+ * 5. Event Details
+ *    - showEventDetail(title): Renders full event details dynamically
+ *    - Displays event title, date, location, category, description
+ *    - Ticket information: price, availability, tickets left, sold out message
+ *    - Ticket controls: quantity selector, add to basket, validation
+ *    - Organizer details: name, email, phone, contact buttons
+ *    - Event description and category
+ *    - Handles event view increment and updates UI
+ *    - Integrates with basket and ticket availability
+ * 
+ * 6. Integration
+ *    - Local storage for event data persistence
+ *    - Geolocation API for user location
+ *    - Leaflet.js for interactive maps
+ *    - Font Awesome for UI elements
+ * 
+ * Data Storage:
+ * - eventData: Event information in local storage
+ * - userLocation: Current location coordinates
+ * - selectedCity: Chosen city with coordinates
+ * - eventCategories: Category definitions with icons
+ * 
+ * External Dependencies:
+ * - Leaflet.js: Interactive map functionality
+ * - Font Awesome: Icons for UI elements
+ * - Inter font: Typography for consistent design
+ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Events - Event Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="user-profile" id="user-profile">
+        <!-- User profile icon and dropdown will be rendered here by script.js -->
+      </div>
+      <h1>Event Management System</h1>
+      <p class="welcome-message">Welcome to our website!</p>
+      <div class="btn-group" id="nav-links">
+        <!-- Navigation links will be rendered here by script.js -->
+      </div>
+    </div>
+  </header>
+
+  <div id="form-area"></div>
+  <div id="map-container" style="display: none;"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize the search page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNavLinks();
+      showSearch();
+    });
+  </script>
+</body>
+</html> 
