@@ -1,3 +1,4 @@
+# CI workflow for automated testing
 name: Automated Testing
 
 on:
